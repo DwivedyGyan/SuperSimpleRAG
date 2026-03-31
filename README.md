@@ -25,26 +25,6 @@ This project is currently configured to use:
 - Embedding model: `nomic-embed-text`
 - LLM model: `llama3.1`
 
-## Test model output
-
-Test Embedding Model
-
-```python
-curl http://localhost:11434/api/embeddings -d '{
-  "model": "nomic-embed-text",
-  "prompt": "test"
-}'
-```
-
-Test LLM
-
-```python
-curl http://localhost:11434/api/generate -d '{
-  "model": "llama3.1",
-  "prompt": "Say hello",
-  "stream": false
-}'
-```
 
 ## Setup
 
@@ -69,6 +49,27 @@ ollama pull llama3.1
 ```
 
 Start Ollama if it is not already running.
+
+## Test model output
+
+Test Embedding Model
+
+```python
+curl http://localhost:11434/api/embeddings -d '{
+  "model": "nomic-embed-text",
+  "prompt": "test"
+}'
+```
+
+Test LLM
+
+```python
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama3.1",
+  "prompt": "Say hello",
+  "stream": false
+}'
+```
 
 ## Run
 
